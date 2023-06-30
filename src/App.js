@@ -1,9 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import WalletProvider from './components/wallet-provider.jsx';
-import { useWallet } from '@txnlab/use-wallet';
-import algosdk from 'algosdk';
+import WalletProvider from './components/WalletProvider.jsx';
 import Page from './components/Page.jsx';
 
 function App() {

@@ -1,7 +1,7 @@
 import { DeflyWalletConnect } from '@blockshake/defly-connect'
 import { DaffiWalletConnect } from '@daffiwallet/connect'
 import { WalletConnectModalSign } from '@walletconnect/modal-sign-html'
-import { WalletProvider, useInitializeProviders, PROVIDER_ID, useWallet } from '@txnlab/use-wallet';
+import { WalletProvider, useInitializeProviders, PROVIDER_ID } from '@txnlab/use-wallet';
 import { PeraWalletConnect } from '@perawallet/connect'
 import algosdk from 'algosdk';
 
@@ -10,7 +10,7 @@ export const NODE_URL = 'https://mainnet-api.algonode.cloud';
 export const NODE_TOKEN = '';
 export const NODE_PORT = 443;
 
-export default function({ children }) {
+export default function MyWalletProvider({ children }) {
     const walletProviders = useInitializeProviders({
     providers: [
       { id: PROVIDER_ID.DEFLY, clientStatic: DeflyWalletConnect },
@@ -22,7 +22,7 @@ export default function({ children }) {
         clientStatic: WalletConnectModalSign,
         clientOptions: {
           projectId: 'd71e931986d008c18d6bdedb8b5938a5',
-          relayUrl: process.env.NEXT_PUBLIC_WC2_RELAY_URL,
+          // relayUrl: process.env.NEXT_PUBLIC_WC2_RELAY_URL,
           metadata: {
             name: 'Folks Party (cipation tool)',
             description: 'Folks Finance Consensus participation tool (unofficial)',
