@@ -135,7 +135,7 @@ export default function Folks() {
         </td></tr>
 
         <tr><td>
-          Vote Key
+          Voting Key
         </td><td>
           <input onChange={({ target: { value }}) => setVotekey(value?.trim())} value={votekey} />
         </td></tr>
