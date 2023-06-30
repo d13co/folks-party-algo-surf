@@ -10,6 +10,8 @@ import algosdk from 'algosdk';
 import { abbrev } from '../util.js';
 import Copyable from './Copyable.jsx';
 
+const govDistributor8 = { appId: 1136393919 };
+
 const algodClient = new algosdk.Algodv2('', "https://mainnet-api.algonode.cloud", 443);
 
 // goal account addpartkey -a DTHIRTEENNLSYGLSEXTXC6X4SVDWMFRCPAOAUCXWIXJRCVBWIIGLYARNQE --roundFirstValid=24057090 --roundLastValid=24707090 --keyDilution=806
@@ -43,7 +45,7 @@ export default function Folks() {
     (async() => {
       const params = await algodClient.getTransactionParams().do();
       const txn = await prepareRegisterEscrowOnlineTransaction(
-        govDistributor7,
+        govDistributor8,
         address,
         Buffer.from(votekey, 'base64'),
         Buffer.from(selectionkey, 'base64'),
@@ -69,7 +71,7 @@ export default function Folks() {
     (async() => {
       const params = await algodClient.getTransactionParams().do();
       const txn = await prepareRegisterEscrowOfflineTransaction(
-        govDistributor7,
+        govDistributor8,
         address,
         params,
       );
