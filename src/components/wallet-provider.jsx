@@ -21,12 +21,12 @@ export default function({ children }) {
         id: PROVIDER_ID.WALLETCONNECT,
         clientStatic: WalletConnectModalSign,
         clientOptions: {
-          projectId: process.env.NEXT_PUBLIC_WC2_PROJECT_ID || '',
+          projectId: 'd71e931986d008c18d6bdedb8b5938a5',
           relayUrl: process.env.NEXT_PUBLIC_WC2_RELAY_URL,
           metadata: {
-            name: 'next-use-wallet',
-            description: 'Next.js @txnlab/use-wallet example',
-            url: 'https://next-use-wallet.vercel.app/',
+            name: 'Folks Party (cipation tool)',
+            description: 'Folks Finance Consensus participation tool (unofficial)',
+            url: 'https://folks-party.algo.surf',
             icons: ['https://next-use-wallet.vercel.app/nfd.svg']
           },
           modalOptions: {

@@ -40,3 +40,11 @@
     transform: rotate(360deg);
   }
 }
+
+.terminal {
+  background: black;
+  color: limegreen;
+  max-width: 100%;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}

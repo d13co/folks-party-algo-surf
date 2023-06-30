@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Folks Party",
+  "name": "Folks Party: Unofficial Consensus Participation tool for Folks Finance",
   "icons": [
     {
       "src": "favicon.ico",
