@@ -13,7 +13,7 @@
     "@txnlab/use-wallet": "^2.0.0",
     "@walletconnect/modal-sign-html": "^2.5.9",
     "algosdk": "^2.4.0",
-    "folks-finance-js-sdk": "^0.9.7",
+    "folks-finance-js-sdk": "^0.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

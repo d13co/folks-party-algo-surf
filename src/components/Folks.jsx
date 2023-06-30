@@ -7,7 +7,7 @@ import {
 } from 'folks-finance-js-sdk';
 import { useWallet } from '@txnlab/use-wallet';
 import algosdk from 'algosdk';
-import { abbrev, b64toAlgoB32 } from '../util.js';
+import { abbrev } from '../util.js';
 import Copyable from './Copyable.jsx';
 
 const algodClient = new algosdk.Algodv2('', "https://mainnet-api.algonode.cloud", 443);
@@ -45,8 +45,8 @@ export default function Folks() {
       const txn = await prepareRegisterEscrowOnlineTransaction(
         govDistributor7,
         address,
-        b64toAlgoB32(votekey),
-        b64toAlgoB32(selectionkey),
+        Buffer.from(votekey, 'base64'),
+        Buffer.from(selectionkey, 'base64'),
         Buffer.from(stateproofkey, 'base64'),
         Number(firstround),
         Number(lastround),
